@@ -1,0 +1,2 @@
+# quantical
+Market research
