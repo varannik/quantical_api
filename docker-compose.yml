@@ -12,3 +12,22 @@ services:
       - ./app:/app 
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=quantical
+      - DB_USER=varanik
+      - DB_PASS=Qazplm2190
+    depends_on:
+      - db
+
+  
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - dev-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=quantical
+      - POSTGRES_USER=varanik
+      - POSTGRES_PASSWORD=Qazplm2190
+volumes:
+  dev-db-data:
