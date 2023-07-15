@@ -3,8 +3,12 @@ Test function
 
 """
 
-def power (x , power): 
+
+def power(x, power):
+
     return x**power
 
-def add(x,y):
+
+def add(x, y):
+
     return x+y
