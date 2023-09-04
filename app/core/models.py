@@ -31,6 +31,8 @@ class UserManager(BaseUserManager):
         return user
 
 
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     """Creating user model"""
     email = models.CharField(max_length=255, unique=True)
